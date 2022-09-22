@@ -1,6 +1,6 @@
 import type { GetStaticProps, NextPage } from "next";
 import styles from "../styles/Home.module.css";
-import prisma from "../lib/prisma";
+import prisma from "../../lib/prisma";
 import { Album } from "@prisma/client";
 
 interface AlbumProps {
