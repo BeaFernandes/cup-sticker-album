@@ -1,8 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Álbum da Copa Qatar 2022
+
+Projeto desenvolvido para a disciplina de Sistemas Distribuidos do curso de Sistemas para Internet da UTFPR - Guarapuava, com intuito de aplicar conhecimentos iniciais de aplicações [Next.js](https://nextjs.org/).
+
+## Sobre o projeto
+
+Sistema para controle de coleção de figurinhas do Álbum da Copa Qatar 2022.
 
 ## Getting Started
 
-First, run the development server:
+First, create an .env file, based on .env.exemple, replacing the database URL for the correct one.
+
+Then, run the development server:
 
 ```bash
 npm run dev
