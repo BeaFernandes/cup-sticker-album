@@ -1,11 +1,10 @@
 import { Button, Form, Input, InputNumber } from "antd";
 import { NextRequest, NextResponse } from "next/server";
 import React, { useState } from "react";
-import PageAlbum from "../collection";
 
 type SizeType = Parameters<typeof Form>[0]["size"];
 
-export default function create() {
+export default function NewSticker() {
   const [form] = Form.useForm();
   const name = Form.useWatch("name", form);
   const country = Form.useWatch("country", form);
@@ -36,7 +35,7 @@ export default function create() {
       let resJson = await res.json();
       if (res.status === 200) {
         alert("Figurinha adicionada com sucesso");
-        window.location.href = "../collection";
+        window.location.href = "/";
       } else {
         alert("Ocorreu um erro no cadastro");
       }

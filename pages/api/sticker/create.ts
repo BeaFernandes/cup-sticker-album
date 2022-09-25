@@ -24,6 +24,15 @@ export default async function handler(
         },
       });
 
+      const album = await prisma.album.update({
+        where: { id: 1 },
+        data: {
+          total: { increment: amount },
+          total_distinct: { increment: 1 },
+          missing: { decrement: 1 },
+        },
+      });
+
       res.status(200).json(createdSticker);
     } catch (err) {
       res.status(500).json({ error: "internal server error" });

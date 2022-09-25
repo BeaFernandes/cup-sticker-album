@@ -15,7 +15,6 @@ model Sticker {
   name String
   country String
   amount Int
-  
 }
 
 model Album {

@@ -1,9 +1,15 @@
 import { ReactNode } from "react";
 
 import "antd/dist/antd.css";
-import { Breadcrumb, Layout, Menu } from "antd";
+import { Breadcrumb, Layout, Menu, Typography } from "antd";
 
 const { Header, Content, Footer } = Layout;
+const { Link } = Typography;
+
+const items = [
+  { label: <Link href="/">Álbum</Link>, key: "album" },
+  { label: <Link href="/sticker/new">Adicionar figurinha</Link>, key: "add" },
+];
 
 interface ApplicationLayoutProps {
   children: ReactNode;
@@ -20,10 +26,7 @@ export default function ApplicationLayout({
           theme="dark"
           mode="horizontal"
           defaultSelectedKeys={["2"]}
-          items={new Array(3).fill(null).map((_, index) => ({
-            key: String(index + 1),
-            label: `nav ${index + 1}`,
-          }))}
+          items={items}
         />
       </Header>
       <Content
