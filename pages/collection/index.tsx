@@ -11,8 +11,6 @@ export default function PageAlbum({ album }: AlbumProps) {
     <div>
       <div>Álbum</div>
       <br />
-
-      <div>{album.owner}</div>
       <div>{album.total_distinct}</div>
       <div>{album.missing}</div>
     </div>
